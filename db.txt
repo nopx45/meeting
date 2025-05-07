@@ -1,0 +1,67 @@
+CREATE TABLE `booking_tb` (
+  `id` int(5) NOT NULL auto_increment primary key,
+  `subject` varchar(200) NOT NULL,
+  `header` varchar(200) NOT NULL,
+  `nummeeting` varchar(10) NOT NULL,
+  `room_id` varchar(5) NOT NULL,
+  `booking_date` date NOT NULL,
+  `time_start` time NOT NULL,
+  `time_end` time NOT NULL,
+  `checktool` text DEFAULT NULL,
+  `checkfood` text DEFAULT NULL,
+  `department` varchar(200) NOT NULL,
+  `person_meeting` text NOT NULL,
+  `remark` text NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `datetime_send` varchar(50) NOT NULL,
+  `booking_status` varchar(50) NOT NULL,
+  `txt_tmp1` text DEFAULT NULL,
+  `txt_tmp2` text DEFAULT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE `list_tb` (
+  `id` int(5) NOT NULL auto_increment primary key,
+  `list_type` varchar(200) NOT NULL,
+  `list_name` varchar(200) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE `user_tb` (
+  `id` int(5) NOT NULL auto_increment primary key,
+  `role` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `fullname` varchar(200) NOT NULL,
+  `position` varchar(200) NOT NULL,
+  `department` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `tel` varchar(200) NOT NULL,
+  `user_status` varchar(5) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE `room_tb` (
+  `id` int(5) NOT NULL auto_increment primary key,
+  `room_name` varchar(200) NOT NULL,
+  `room_pic` varchar(100) NOT NULL,
+  `room_address` varchar(500) NOT NULL,
+  `total_seat` varchar(10) NOT NULL,
+  `response_name` varchar(200) NOT NULL,
+  `department` varchar(200) NOT NULL,
+  `tel` varchar(200) NOT NULL,
+  `remarks` varchar(500) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+INSERT INTO `user_tb` VALUES (1, 'ผู้ดูแลระบบ', 'admin', 'admin', 'กรอกชื่อ-นามสกุล', 'กรอกตำแหน่ง', 'กรอกสังกัด', 'กรอกอีเมล์', 'กรอกเบอร์โทรศัพท์');
+INSERT INTO `user_tb` VALUES (2, 'ผู้ใช้งานทั่วไป', 'user', 'user', 'กรอกชื่อ-นามสกุล', 'กรอกตำแหน่ง', 'กรอกสังกัด', 'กรอกอีเมล์', 'กรอกเบอร์โทรศัพท์');
+INSERT INTO `room_tb` VALUES (1, 'ห้องประชุมใหญ่', 'nofile.jpg', 'ห้อง 344 ชั้น 3 ตึก 4 \r\nบริษัท AAA จำกัด (มหาชน)', '200', 'กรอกชื่อ-นามสกุล', 'ฝ่ายอาคารและสถานที่', '021234567', '-');
+INSERT INTO `room_tb` VALUES (2, 'ห้องประชุมเล็ก', 'nofile.jpg', 'ห้อง 234 ชั้น 2 ตึก 3 \r\nบริษัท AAA จำกัด (มหาชน)', '50', 'กรอกชื่อ-นามสกุล', 'ฝ่ายอาคารและสถานที่', '021234567', '-');
+INSERT INTO `list_tb` VALUES (1, 'เตรียมอาหาร', 'อาหารว่างเช้า');
+INSERT INTO `list_tb` VALUES (2, 'เตรียมอาหาร', 'อาหารกลางวัน');
+INSERT INTO `list_tb` VALUES (3, 'เตรียมอาหาร', 'อาหารว่างบ่าย');
+INSERT INTO `list_tb` VALUES (4, 'อุปกรณ์ที่ใช้', 'เครื่องฉายโปรเจคเตอร์');
+INSERT INTO `list_tb` VALUES (5, 'อุปกรณ์ที่ใช้', 'คอมพิวเตอร์โน๊ตบุ๊ค');
+INSERT INTO `list_tb` VALUES (6, 'อุปกรณ์ที่ใช้', 'ไมโครโฟน');
+INSERT INTO `list_tb` VALUES (7, 'อุปกรณ์ที่ใช้', 'Pointer');
+INSERT INTO `list_tb` VALUES (8, 'อุปกรณ์ที่ใช้', 'กล้องวิดีโอ');
+INSERT INTO `list_tb` VALUES (9, 'อุปกรณ์ที่ใช้', 'กล้องถ่ายภาพ');
+
+

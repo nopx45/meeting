@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+<title>:: คู่มือการติดตั้ง ::</title>
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 14pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+BODY { font-size: 9pt; font-family: Arial, Helvetica, sans-serif; } 
+-->
+</style>
+
+</head>
+
+<body>
+<center>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="690" id="AutoNumber1" height="400">
+  <tr>
+    <td width="690" height="47" background="images/obj_top.jpg"><center>
+    <font color="#FFFFFF" size="6"><big>:: คู่มือการติดตั้ง ::</big></font></center></td>
+  </tr>
+  <tr>
+    <td width="690" height="375" valign="top"><br><br>
+
+<center>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="645" id="AutoNumber2" height="100">
+      
+      <tr>
+        <td width="100%" height="16" background="images/barblue.gif">&nbsp;&nbsp;การติดตั้งใน Host จริง (ในที่นี้ใช้ของ Host ผมให้ดูนะครับ)</td>
+      </tr>
+      <tr>
+        <td width="100%" height="75"><br>
+        <center>
+        1. HOST ทุกที่ต้องมีตัว Control Panel ให้เข้าใช้ครับ โดยจะต้องบอกเรามาตอนจ่ายเงินครับ<br>(ถ้าไม่ทราบให้ถามไปที่ HOST ที่คุณใช้เลยครับ)<br><br><img src="images/1.jpg"><br><br>
+        2. พอเข้าไปแล้ว ให้หาหัวข้อที่เกี่ยวกับ MySQL ให้ได้ครับ แล้วก็เข้าไปสร้างฐานข้อมูลใหม่ขึ้นมาครับ<br>พร้อมกับตั้ง Username และ Password ในการเข้าใช้ฐานข้อมูลด้วยครับ<br><br><img src="images/2-1.jpg"><br><u>หาหัวข้อเกี่ยวกับ MySQL ให้ได้ แล้วเข้าไป</u><br><br><img src="images/2-2.jpg"><br><u>สร้างฐานข้อมูลอันใหม่ขึ้นมา พร้อมใส่ Username และ Password ในการติดต่อ Database ด้วย</u><br><br><img src="images/2-3.jpg"><br><u>พอกดสร้างแล้ว ถ้าสำเร็จก็จะรายงานผลออกมาว่าสำเร็จ</u><br><br>
+        3. กลับมาที่ไฟล์ภายในโฟลเดอร์ meeting ครับ ใช้โปรแกรม Notepad เปิดไฟล์ <b>"config.php"</b> ครับ<br>แล้วก็เข้าไปแก้ไขข้อมูลในนี้<br><br><img src="images/3.jpg"><br><br>
+        4. เข้าไปแก้ข้อมูลในไฟล์นี้ครับ เสร็จแล้ว Save ด้วย<br><br><img src="images/4.jpg"><br><br>
+        5. กลับมาที่ไฟล์ภายในโฟลเดอร์ meeting ครับ ใช้โปรแกรม Notepad เปิดไฟล์ <b>"dbconfig.php"</b> <br>แล้วก็เข้าไปแก้ไขข้อมูลในนี้<br><br><img src="images/5.jpg"><br><br>
+        6. เข้าไปแก้ข้อมูลในไฟล์นี้ครับ เสร็จแล้ว Save ด้วย<br><br><img src="images/6.jpg"><br><br>
+        7. ทำการ Upload ไฟล์ทั้งหมดขึ้นไปบน Host ของคุณเลยครับ<br><br><img src="images/7.jpg"><br><br>
+        8. ถ้า Server ที่คุณใช้เป็น UNIX/LINUX <b>ให้ทำการ CHMOD โฟลเดอร์ที่ชื่อ room_picture<br>เป็น 777 ด้วย</b> ครับ <font color="red"><b>สำคัญมากนะครับ</b></font><br><br><img src="images/chmod.jpg"><br><br>
+        9. ใช้ Browser เปิดหน้า setup.php เพื่อทำการติดตั้งระบบ (เช่นของผมก็ใช้เป็น<br>http://www.thamwebsite.com/meeting/setup.php น่ะครับ <u>คือขึ้นอยู่<br>กับว่า คุณจะ Upload ไปไว้ที่ใดน่ะครับ</u>) โดยถ้าได้ติดตั้งสำเร็จก็จะมีข้อความ<br>บอกว่า <b>"การสร้างตารางลงฐานข้อมูลเสร็จสมบูรณ์ !!"</b><br><br><img src="images/8-1.jpg"><br><br><img src="images/8-2.jpg"><br><br>
+        10. เป็นอันเสร็จสิ้นการติดตั้งครับ สามารถใช้งานได้เลย<br>( เช่น หน้าระบบ สามารถเข้าผ่านทาง http://www.thamwebsite.com/meeting ครับ )<br><br><img src="images/9.jpg"><br><br>
+        11. แค่นี้ก็พร้อมใช้งานแล้วครับ<br><br>
+        12. ผู้ดูแลระบบใช้ Username : admin และ Password : admin ในการเข้าจัดการระบบทั้งหมดได้<br><br>
+        13. ผู้ใช้งานทั่วไปใช้ Username : user และ Password : user ในการเข้าจองห้องประชุมได้<br><br>
+        </center>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" height="16"></td>
+      </tr>
+    </table>
+    </center>
+    </td>
+  </tr>
+</table>
+</center>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+<title>:: คู่มือการติดตั้ง ::</title>
+<STYLE type=text/css>
+  A:link { color: #0000cc; text-decoration:none}
+  A:visited {color: #0000cc; text-decoration: none}
+  A:hover {color: red; text-decoration: none}
+ </STYLE>
+<style type="text/css">
+<!--
+small { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; } 
+input, textarea { font-family: Arial, Helvetica, sans-serif; font-size: 9pt; } 
+b { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+big { font-family: Arial, Helvetica, sans-serif; font-size: 14pt; } 
+strong { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; font-weight : extra-bold; } 
+font, td { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; } 
+BODY { font-size: 9pt; font-family: Arial, Helvetica, sans-serif; } 
+.style1 {
+	text-align: right;
+}
+.style2 {
+	font-weight: bold;
+	text-align: right;
+}
+-->
+</style>
+
+</head>
+
+<body>
+<center>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="690" id="AutoNumber1" height="400">
+  <tr>
+    <td width="690" height="47" background="images/obj_top.jpg"><center>
+    <font color="#FFFFFF" size="6"><big>:: คู่มือการติดตั้ง ::</big></font></center></td>
+  </tr>
+  <tr>
+    <td width="690" height="375" valign="top"><br><br>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="645" id="AutoNumber2" height="100">
+      <tr>
+        <td width="100%" height="16" background="images/barred.gif">&nbsp;&nbsp;การติดตั้งใน Host จำลอง โดยการใช้โปรแกรม Appserv</td>
+      </tr>
+      <tr>
+        <td width="100%" height="75"><br>
+        <center>
+        1. ดาวน์โหลดโปรแกรม Appserv มาติดตั้งให้เรียบร้อยก่อน <a href="http://www.thamwebsite.com/appserv.zip" target="_blank">คลิ๊กที่นี่เพื่อดาวน์โหลด !</a><br><br>
+        2. ส่วนวิธีการติดตั้ง <a href="http://www.appservnetwork.com/modules.php?name=Content&pa=showpage&pid=8" target="_blank">คลิ๊กที่นี่ครับ !</a> (ใส่ค่าตามรูปภาพนั้นไปเลยครับ)<br><br>
+        3. นำโฟลเดอร์ชื่อ <b>"meeting"</b> ไปวางใน <b>"C:\AppServ\www"</b> ครับ<br><br><img src="images/1.jpg"><br><br>
+        4. ใช้ Browser เปิดหน้า http://localhost/phpmyadmin แล้วจะมีให้กรอก Username และ Password เพื่อ<br>เข้า ก็ให้กรอกอันที่ตอนใช้ติดตั้งลงไปครับ (โดย Default แล้ว Username = root , Password = ใช้ที่ตั้ง<br>ไว้ตอนติดตั้ง นะ) พอเข้ามาได้แล้วจะเป็นแบบด้านล่างครับ
+             <br><br><img src="images/2.jpg"><br><br>
+        5. ให้สร้างฐานข้อมูลใหม่ชื่อ <b>"meeting"</b> (จะใช้ชื่ออื่นก็ได้) โดยการเรียงลำดับควรจะ<br>ให้เป็น <b>"utf8_bin"</b><br><br><img src="images/3.jpg"><br><br>
+        6. กลับมาที่ไฟล์ภายในโฟลเดอร์ meeting ครับ ใช้โปรแกรม Notepad เปิดไฟล์ <b>"config.php"</b> ครับ<br>แล้วก็เข้าไปแก้ไขข้อมูลในนี้ [ใช้ข้อมูลเหมือนที่ตั้งในข้อ 4-5]<br><br><img src="images/4.jpg"><br><br>
+        7. เข้าไปแก้ข้อมูลในไฟล์นี้ครับ เสร็จแล้ว Save ด้วย<br><br><img src="images/5.jpg"><br><br>
+        8. กลับมาที่ไฟล์ภายในโฟลเดอร์ meeting ครับ ใช้โปรแกรม Notepad เปิดไฟล์ <b>"dbconfig.php"</b> <br>แล้วก็เข้าไปแก้ไขข้อมูลในนี้<br><br><img src="images/6.jpg"><br><br>
+        9. เข้าไปแก้ข้อมูลในไฟล์นี้ครับ เสร็จแล้ว Save ด้วย<br><br><img src="images/7.jpg"><br><br>
+        10. ใช้ Browser เปิดหน้า http://localhost/meeting/setup.php เพื่อทำการติดตั้งระบบ ถ้าสำเร็จก็จะมี<br>ข้อความบอกว่า <b>"การสร้างตารางในการใช้งานสำเร็จ !!"</b><br><br><img src="images/8-1.jpg"><br><br><img src="images/8-2.jpg"><br><br>
+        11. เป็นอันเสร็จสิ้นการติดตั้งครับ สามารถใช้งานได้เลย<br>( เช่น หน้าระบบ สามารถเข้าผ่านทาง http://localhost/meeting ครับ )<br><br><img src="images/9.jpg"><br><br>
+        12. ผู้ดูแลระบบใช้ Username : admin และ Password : admin ในการเข้าจัดการระบบทั้งหมดได้<br><br>
+        13. ผู้ใช้งานทั่วไปใช้ Username : user และ Password : user ในการเข้าจองห้องประชุมได้<br><br>
+        </center>
+        </td>
+      </tr>
+      
+    </table>
+    </center>
+    </td>
+  </tr>
+</table>
+</center>
+</body>
+
+</html>
